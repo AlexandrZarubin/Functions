@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 //#include<time.h>
 //
 //
@@ -6,76 +6,76 @@ const int n = 5;
 //
 //
 using namespace std;
-void FillRand(int arr[], const int n,int minRand=0,int maxRand=100);//Заполнение int
-void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);//Заполнение double
-void FillRand(char arr[], const int n, int minRand = 0, int maxRand = 100);//Заполнение cahr
+void FillRand(int arr[], const int n,int minRand=0,int maxRand=100);//Р—Р°РїРѕР»РЅРµРЅРёРµ int
+void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);//Р—Р°РїРѕР»РЅРµРЅРёРµ double
+void FillRand(char arr[], const int n, int minRand = 0, int maxRand = 100);//Р—Р°РїРѕР»РЅРµРЅРёРµ cahr
 
 //2dArray
-void FillRand(int arr[][n], const int n, int minRand = 0, int maxRand = 100);//Заполнение int
-void FillRand(double arr[][n], const int n, int minRand = 0, int maxRand = 100);//Заполнение double
-void FillRand(char arr[][n], const int n, int minRand = 0, int maxRand = 100);//Заполнение cahr
+void FillRand(int arr[][n], const int n, int minRand = 0, int maxRand = 100);//Р—Р°РїРѕР»РЅРµРЅРёРµ int
+void FillRand(double arr[][n], const int n, int minRand = 0, int maxRand = 100);//Р—Р°РїРѕР»РЅРµРЅРёРµ double
+void FillRand(char arr[][n], const int n, int minRand = 0, int maxRand = 100);//Р—Р°РїРѕР»РЅРµРЅРёРµ cahr
 
 
-void Print(const int arr[], const int n);		//Вывод int
-void Print(const double arr[], const int n);	//Ввывод double
-void Print(const char arr[], const int n);		//Вывод char
-
-//2dArray
-void Print(const int arr[][n], const int n);		//Вывод int
-void Print(const double arr[][n], const int n);	//Ввывод double
-void Print(const char arr[][n], const int n);		//Вывод char
-
-int Sum(const int arr[], const int n);			//Сумма int
-double Sum(const double arr[], const int n);	//Сумма double
-char Sum(const char arr[], const int n);		//Сумма char
+void Print(const int arr[], const int n);		//Р’С‹РІРѕРґ int
+void Print(const double arr[], const int n);	//Р’РІС‹РІРѕРґ double
+void Print(const char arr[], const int n);		//Р’С‹РІРѕРґ char
 
 //2dArray
-int Sum(const int arr[][n], const int n);			//Сумма int
-double Sum(const double arr[][n], const int n);	//Сумма double
-char Sum(const char arr[][n], const int n);		//Сумма char
+void Print(const int arr[][n], const int n);		//Р’С‹РІРѕРґ int
+void Print(const double arr[][n], const int n);	//Р’РІС‹РІРѕРґ double
+void Print(const char arr[][n], const int n);		//Р’С‹РІРѕРґ char
 
-
-int Avg(const int arr[], const int n);			//среднее-арифметическое int
-double Avg(const double arr[], const int n);	//среднее-арифметическое double
-char Avg(const char arr[], const int n);		//среднее-арифметическое char
-
-//2dArray
-int Avg(const int arr[][n], const int n);			//среднее-арифметическое int
-double Avg(const double arr[][n], const int n);	//среднее-арифметическое double
-char Avg(const char arr[][n], const int n);		//среднее-арифметическое char
-
-int minValueIn(const int arr[], const int n);			//возвращает минимальное int
-double minValueIn(const double arr[], const int n);		//возвращает минимальное double
-char minValueIn(const char arr[], const int n);			//возвращает минимальное char
+int Sum(const int arr[], const int n);			//РЎСѓРјРјР° int
+double Sum(const double arr[], const int n);	//РЎСѓРјРјР° double
+char Sum(const char arr[], const int n);		//РЎСѓРјРјР° char
 
 //2dArray
-int minValueIn(const int arr[][n], const int n);			//возвращает минимальное int
-double minValueIn(const double arr[][n], const int n);		//возвращает минимальное double
-char minValueIn(const char arr[][n], const int n);			//возвращает минимальное char
+int Sum(const int arr[][n], const int n);			//РЎСѓРјРјР° int
+double Sum(const double arr[][n], const int n);	//РЎСѓРјРјР° double
+char Sum(const char arr[][n], const int n);		//РЎСѓРјРјР° char
 
-int maxValueIn(const int arr[], const int n);			//возвращает максимальное int
-double maxValueIn(const double arr[], const int n);		//возвращает максимальное double
-char maxValueIn(const char arr[], const int n);			//возвращает максимальное char
+
+int Avg(const int arr[], const int n);			//СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ int
+double Avg(const double arr[], const int n);	//СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ double
+char Avg(const char arr[], const int n);		//СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ char
 
 //2dArray
-int maxValueIn(const int arr[][n], const int n);			//возвращает максимальное int
-double maxValueIn(const double arr[][n], const int n);		//возвращает максимальное double
-char maxValueIn(const char arr[][n], const int n);			//возвращает максимальное char
+int Avg(const int arr[][n], const int n);			//СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ int
+double Avg(const double arr[][n], const int n);	//СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ double
+char Avg(const char arr[][n], const int n);		//СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ char
 
-template <typename T> void ShiftLeft(T Arr[], const int n,const int Shift=1); //шаблон циклически сдвига массив на заданное число элементов влево
+int minValueIn(const int arr[], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ int
+double minValueIn(const double arr[], const int n);		//РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ double
+char minValueIn(const char arr[], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ char
+
+//2dArray
+int minValueIn(const int arr[][n], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ int
+double minValueIn(const double arr[][n], const int n);		//РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ double
+char minValueIn(const char arr[][n], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ char
+
+int maxValueIn(const int arr[], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ int
+double maxValueIn(const double arr[], const int n);		//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ double
+char maxValueIn(const char arr[], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ char
+
+//2dArray
+int maxValueIn(const int arr[][n], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ int
+double maxValueIn(const double arr[][n], const int n);		//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ double
+char maxValueIn(const char arr[][n], const int n);			//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ char
+
+template <typename T> void ShiftLeft(T Arr[], const int n,const int Shift=1); //С€Р°Р±Р»РѕРЅ С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР° РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ
 template <typename T> void ShiftRight(T Arr[], const int n,const int Shift = 1);
 
 //2dArray
-template <typename T> void ShiftLeft(T Arr[][n], const int n,const int Shift = 1); //шаблон циклически сдвига массив на заданное число элементов влево
+template <typename T> void ShiftLeft(T Arr[][n], const int n,const int Shift = 1); //С€Р°Р±Р»РѕРЅ С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР° РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ
 template <typename T> void ShiftRight(T Arr[][n], const int n,const int Shift = 1);
-template <typename T> void ShiftLeftLine(T Arr[][n], const int n, const int Shift = 1); //шаблон циклически сдвига массив на заданное число элементов влево
+template <typename T> void ShiftLeftLine(T Arr[][n], const int n, const int Shift = 1); //С€Р°Р±Р»РѕРЅ С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР° РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ
 template <typename T> void ShiftRightLine(T Arr[][n], const int n, const int Shift = 1);
 
 
-template <typename T>void SortSample(T arr[], const int n);			//Сортировка массива  int		Shell
+template <typename T>void SortSample(T arr[], const int n);			//РЎРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°  int		Shell
 
 //2dArray
-template <typename T>void SortSample(T arr[][n], const int n);			//Сортировка массива  int
+template <typename T>void SortSample(T arr[][n], const int n);			//РЎРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°  int
 
 
 void main()
@@ -86,43 +86,43 @@ void main()
 	int arr[n];
 	double arrD[n]{};
 	char arrCh[n]{};
-	FillRand(arr, n);//Заполнение int
-	FillRand(arrD, n);//Заполнение double
-	FillRand(arrCh, n);//Заполнение char
+	FillRand(arr, n);//Р—Р°РїРѕР»РЅРµРЅРёРµ int
+	FillRand(arrD, n);//Р—Р°РїРѕР»РЅРµРЅРёРµ double
+	FillRand(arrCh, n);//Р—Р°РїРѕР»РЅРµРЅРёРµ char
 	Print(arr, n);
-	cout <<"Сумма массива int: "<< Sum(arr, n) << endl;
-	cout << "среднее-арифметическое int: " << Avg(arr, n) << endl;
-	cout << "минимальное  значение из массива int: " << minValueIn(arr, n) << endl;
-	cout << "максимальное  значение из массива int: " << maxValueIn(arr, n) << endl;
-	cout << "Сдвиг в влево "; ShiftLeft(arr, n);
+	cout <<"РЎСѓРјРјР° РјР°СЃСЃРёРІР° int: "<< Sum(arr, n) << endl;
+	cout << "СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ int: " << Avg(arr, n) << endl;
+	cout << "РјРёРЅРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° int: " << minValueIn(arr, n) << endl;
+	cout << "РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° int: " << maxValueIn(arr, n) << endl;
+	cout << "РЎРґРІРёРі РІ РІР»РµРІРѕ "; ShiftLeft(arr, n);
 	Print(arr, n);
-	cout << "Сдвиг в право "; ShiftRight(arr, n);
+	cout << "РЎРґРІРёРі РІ РїСЂР°РІРѕ "; ShiftRight(arr, n);
 	Print(arr, n);
 	SortSample(arr, n);
 	cout << "Sort\t\t"; Print(arr, n);
 	cout << endl;
 	Print(arrD, n);
-	cout << "Сумма массива double: " << Sum(arrD, n) << endl;
-	cout << "среднее-арифметическое double: " << Avg(arrD, n) << endl;
-	cout << "минимальное  значение из массива double: " << minValueIn(arrD, n) << endl;
-	cout << "максимальное  значение из массива double: " << maxValueIn(arrD, n) << endl;
-	cout << "Сдвиг в влево "; ShiftLeft(arrD, n);
+	cout << "РЎСѓРјРјР° РјР°СЃСЃРёРІР° double: " << Sum(arrD, n) << endl;
+	cout << "СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ double: " << Avg(arrD, n) << endl;
+	cout << "РјРёРЅРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double: " << minValueIn(arrD, n) << endl;
+	cout << "РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double: " << maxValueIn(arrD, n) << endl;
+	cout << "РЎРґРІРёРі РІ РІР»РµРІРѕ "; ShiftLeft(arrD, n);
 	Print(arrD, n);
-	cout << "Сдвиг в право "; ShiftRight(arrD, n);
+	cout << "РЎРґРІРёРі РІ РїСЂР°РІРѕ "; ShiftRight(arrD, n);
 	Print(arrD, n);
 	cout << endl;
 	Print(arrCh, n);
-	cout << "Сумма массива char: " << Sum(arrCh, n) << endl;
-	cout << "среднее-арифметическое char: " << Avg(arrCh, n) << endl;
-	cout << "минимальное  значение из массива char: " << minValueIn(arrCh, n) << endl;
-	cout << "максимальное  значение из массива char: " << maxValueIn(arrCh, n) << endl;
-	cout << "Сдвиг в влево "; ShiftLeft(arrCh, n);
+	cout << "РЎСѓРјРјР° РјР°СЃСЃРёРІР° char: " << Sum(arrCh, n) << endl;
+	cout << "СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ char: " << Avg(arrCh, n) << endl;
+	cout << "РјРёРЅРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° char: " << minValueIn(arrCh, n) << endl;
+	cout << "РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° char: " << maxValueIn(arrCh, n) << endl;
+	cout << "РЎРґРІРёРі РІ РІР»РµРІРѕ "; ShiftLeft(arrCh, n);
 	Print(arrCh, n);
-	cout << "Сдвиг в право "; ShiftRight(arrCh, n);
+	cout << "РЎРґРІРёРі РІ РїСЂР°РІРѕ "; ShiftRight(arrCh, n);
 	Print(arrCh, n);
 	cout << endl<<endl;
 	cout << "--------------------------------------------------\n";
-	cout << "Двумерный массив\n";
+	cout << "Р”РІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n";
 	//2dArray
 	int TwoArr[n][n]{};
 	double TwoArrD[n][n]{};
@@ -133,32 +133,32 @@ void main()
 	FillRand(TwoArrCh, n);
 
 	Print(TwoArr, n);
-	cout << "Сдвиг в влево\n"; ShiftLeft(TwoArr, n);
+	cout << "РЎРґРІРёРі РІ РІР»РµРІРѕ\n"; ShiftLeft(TwoArr, n);
 	Print(TwoArr, n);
-	cout << "Сдвиг в право\n"; ShiftRight(TwoArr, n);
+	cout << "РЎРґРІРёРі РІ РїСЂР°РІРѕ\n"; ShiftRight(TwoArr, n);
 	Print(TwoArr, n);
-	cout << "Построчно\n";
+	cout << "РџРѕСЃС‚СЂРѕС‡РЅРѕ\n";
 	//Print(TwoArr, n);
-	cout << "Сдвиг в влево\n"; ShiftLeftLine(TwoArr, n);
+	cout << "РЎРґРІРёРі РІ РІР»РµРІРѕ\n"; ShiftLeftLine(TwoArr, n);
 	Print(TwoArr, n);
-	cout << "Сдвиг в право\n"; ShiftRightLine(TwoArr, n);
+	cout << "РЎРґРІРёРі РІ РїСЂР°РІРѕ\n"; ShiftRightLine(TwoArr, n);
 	Print(TwoArr, n);
-	cout << "Сумма массива int: " << Sum(TwoArr, n) << endl;
-	cout << "среднее-арифметическое int: " << Avg(TwoArr, n) << endl;
-	cout << "минимальное  значение из массива int: " << minValueIn(TwoArr, n) << endl;
-	cout << "максимальное  значение из массива int: " << maxValueIn(TwoArr, n) << endl;
+	cout << "РЎСѓРјРјР° РјР°СЃСЃРёРІР° int: " << Sum(TwoArr, n) << endl;
+	cout << "СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ int: " << Avg(TwoArr, n) << endl;
+	cout << "РјРёРЅРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° int: " << minValueIn(TwoArr, n) << endl;
+	cout << "РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° int: " << maxValueIn(TwoArr, n) << endl;
 	cout << endl;
 	Print(TwoArrD, n);
-	cout << "Сумма массива double: " << Sum(TwoArrD, n) << endl;
-	cout << "среднее-арифметическое double: " << Avg(TwoArrD, n) << endl;
-	cout << "минимальное  значение из массива double: " << minValueIn(TwoArrD, n) << endl;
-	cout << "максимальное  значение из массива double: " << maxValueIn(TwoArrD, n) << endl;
+	cout << "РЎСѓРјРјР° РјР°СЃСЃРёРІР° double: " << Sum(TwoArrD, n) << endl;
+	cout << "СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ double: " << Avg(TwoArrD, n) << endl;
+	cout << "РјРёРЅРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double: " << minValueIn(TwoArrD, n) << endl;
+	cout << "РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double: " << maxValueIn(TwoArrD, n) << endl;
 	cout << endl;
 	Print(TwoArrCh, n);
-	cout << "Сумма массива char: " << Sum(TwoArrCh, n) << endl;
-	cout << "среднее-арифметическое char: " << Avg(TwoArrCh, n) << endl;
-	cout << "минимальное  значение из массива char: " << minValueIn(TwoArrCh, n) << endl;
-	cout << "максимальное  значение из массива char: " << maxValueIn(TwoArrCh, n) << endl;
+	cout << "РЎСѓРјРјР° РјР°СЃСЃРёРІР° char: " << Sum(TwoArrCh, n) << endl;
+	cout << "СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ char: " << Avg(TwoArrCh, n) << endl;
+	cout << "РјРёРЅРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° char: " << minValueIn(TwoArrCh, n) << endl;
+	cout << "РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ  Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° char: " << maxValueIn(TwoArrCh, n) << endl;
 	
 	
 }
@@ -298,7 +298,7 @@ void Print(const char arr[][n], const int n)
 
 int Sum(const int arr[], const int n)
 {
-	int Summa = 0;//счетчик суммы
+	int Summa = 0;//СЃС‡РµС‚С‡РёРє СЃСѓРјРјС‹
 	for (int i = 0; i < n; i++)
 	{
 		Summa += arr[i];
@@ -308,7 +308,7 @@ int Sum(const int arr[], const int n)
 
 double Sum(const double arr[], const int n)
 {
-	double Summa = 0;//счетчик суммы
+	double Summa = 0;//СЃС‡РµС‚С‡РёРє СЃСѓРјРјС‹
 	for (int i = 0; i < n; i++)
 	{
 		Summa += arr[i];
@@ -318,7 +318,7 @@ double Sum(const double arr[], const int n)
 
 char Sum(const char arr[], const int n)
 {
-	char Summa = 0;//счетчик суммы
+	char Summa = 0;//СЃС‡РµС‚С‡РёРє СЃСѓРјРјС‹
 	for (int i = 0; i < n; i++)
 	{
 		Summa += arr[i];
@@ -328,7 +328,7 @@ char Sum(const char arr[], const int n)
 
 int Sum(const int arr[][n], const int n)
 {
-	int Summa = 0;//счетчик суммы
+	int Summa = 0;//СЃС‡РµС‚С‡РёРє СЃСѓРјРјС‹
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -341,7 +341,7 @@ int Sum(const int arr[][n], const int n)
 
 double Sum(const double arr[][n], const int n)
 {
-	double Summa = 0;//счетчик суммы
+	double Summa = 0;//СЃС‡РµС‚С‡РёРє СЃСѓРјРјС‹
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -354,7 +354,7 @@ double Sum(const double arr[][n], const int n)
 
 char Sum(const char arr[][n], const int n)
 {
-	char Summa = 0;//счетчик суммы
+	char Summa = 0;//СЃС‡РµС‚С‡РёРє СЃСѓРјРјС‹
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -397,7 +397,7 @@ char Avg(const char arr[][n], const int n)
 
 int minValueIn(const int arr[], const int n)
 {
-	int Min = arr[0]; //счетчик мин
+	int Min = arr[0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		
@@ -408,7 +408,7 @@ int minValueIn(const int arr[], const int n)
 
 double minValueIn(const double arr[], const int n)
 {
-	double Min = arr[0]; //счетчик мин
+	double Min = arr[0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 
@@ -419,7 +419,7 @@ double minValueIn(const double arr[], const int n)
 
 char minValueIn(const char arr[], const int n)
 {
-	char Min = arr[0]; //счетчик мин
+	char Min = arr[0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 
@@ -430,7 +430,7 @@ char minValueIn(const char arr[], const int n)
 
 int minValueIn(const int arr[][n], const int n)
 {
-	int Min = arr[0][0]; //счетчик мин
+	int Min = arr[0][0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -443,7 +443,7 @@ int minValueIn(const int arr[][n], const int n)
 
 double minValueIn(const double arr[][n], const int n)
 {
-	double Min = arr[0][0]; //счетчик мин
+	double Min = arr[0][0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -456,7 +456,7 @@ double minValueIn(const double arr[][n], const int n)
 
 char minValueIn(const char arr[][n], const int n)
 {
-	char Min = arr[0][0]; //счетчик мин
+	char Min = arr[0][0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -469,7 +469,7 @@ char minValueIn(const char arr[][n], const int n)
 
 int maxValueIn(const int arr[], const int n)
 {
-	int Max = arr[0]; //счетчик мин
+	int Max = arr[0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 
@@ -480,7 +480,7 @@ int maxValueIn(const int arr[], const int n)
 
 double maxValueIn(const double arr[], const int n)
 {
-	double Max = arr[0]; //счетчик мин
+	double Max = arr[0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 
@@ -491,7 +491,7 @@ double maxValueIn(const double arr[], const int n)
 
 char maxValueIn(const char arr[], const int n)
 {
-	char Max = arr[0]; //счетчик мин
+	char Max = arr[0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 
@@ -502,7 +502,7 @@ char maxValueIn(const char arr[], const int n)
 
 int maxValueIn(const int arr[][n], const int n)
 {
-	int Max = arr[0][0]; //счетчик мин
+	int Max = arr[0][0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -515,7 +515,7 @@ int maxValueIn(const int arr[][n], const int n)
 
 double maxValueIn(const double arr[][n], const int n)
 {
-	double Max = arr[0][0]; //счетчик мин
+	double Max = arr[0][0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -528,7 +528,7 @@ double maxValueIn(const double arr[][n], const int n)
 
 char maxValueIn(const char arr[][n], const int n)
 {
-	char Max = arr[0][0]; //счетчик мин
+	char Max = arr[0][0]; //СЃС‡РµС‚С‡РёРє РјРёРЅ
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -550,7 +550,7 @@ template<typename T>void ShiftLeft(T Arr[], const int n,const int Shift)
 		{
 			Arr[j] = Arr[j + 1];
 		}
-		Arr[n - 1] = FirstElement;//Ставим первый элемент в самый конец
+		Arr[n - 1] = FirstElement;//РЎС‚Р°РІРёРј РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РІ СЃР°РјС‹Р№ РєРѕРЅРµС†
 		
 	}
 	//return 0;
@@ -566,7 +566,7 @@ void ShiftRight(T Arr[], const int n,const int Shift)
 		{
 			Arr[j] = Arr[j - 1];
 		}
-		Arr[0] = FirstElement;//Ставим первый элемент в самый конец
+		Arr[0] = FirstElement;//РЎС‚Р°РІРёРј РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РІ СЃР°РјС‹Р№ РєРѕРЅРµС†
 
 	}
 }
@@ -646,10 +646,10 @@ for (int i = n - 1; i >= 0; i--)
 template<typename T>
 void SortSample(T arr[], const int n)
 {
-	for (int i = 0; i < n - 1; i++)//меняем мместами 
+	for (int i = 0; i < n - 1; i++)//РјРµРЅСЏРµРј РјРјРµСЃС‚Р°РјРё 
 	{
 		int IndexMin = i;
-		for (int j = i + 1; j < n; j++)//поиск минимального элемента 
+		for (int j = i + 1; j < n; j++)//РїРѕРёСЃРє РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° 
 		{
 			if (arr[j] < arr[IndexMin])IndexMin = j;
 		}

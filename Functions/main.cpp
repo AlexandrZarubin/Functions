@@ -1,16 +1,16 @@
-#include<iostream>
+п»ї#include<iostream>
 
 using namespace std;
 int Sum(int a, int b);
 int Diff(int a, int b);
 int Prode(int a, int b);
 double Quot(int a, int b);
-template<typename T>T Power(T Base, int Degree);//возводит число в степень
+template<typename T>T Power(T Base, int Degree);//РІРѕР·РІРѕРґРёС‚ С‡РёСЃР»Рѕ РІ СЃС‚РµРїРµРЅСЊ
 void main()
 {
 	setlocale(LC_ALL, "rus");
 	int a, b;
-	cout << "Введите два числа: "; cin >> a >> b;
+	cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°: "; cin >> a >> b;
 	int c=Sum(a, b);
 	cout << a << " + " << b << " = " << c << endl;
 
@@ -44,7 +44,7 @@ double Quot(int a, int b)
 
 template<typename T>T Power(T Base, int Degree)
 {
-	if (Degree == 0)return 1;//Любое число в степени 0 равно 1
+	if (Degree == 0)return 1;//Р›СЋР±РѕРµ С‡РёСЃР»Рѕ РІ СЃС‚РµРїРµРЅРё 0 СЂР°РІРЅРѕ 1
 	T Result = 1;
 	for (int i = 0; i < Degree; i++)
 	{
