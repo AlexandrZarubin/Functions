@@ -143,6 +143,8 @@ void main()
 	Print(TwoArr, n);
 	cout << "Сдвиг в право\n"; ShiftRightLine(TwoArr, n);
 	Print(TwoArr, n);
+	cout << "сортировка\n"; SortSample(TwoArr, n);
+	Print(TwoArr, n);
 	cout << "Сумма массива int: " << Sum(TwoArr, n) << endl;
 	cout << "среднее-арифметическое int: " << Avg(TwoArr, n) << endl;
 	cout << "минимальное  значение из массива int: " << minValueIn(TwoArr, n) << endl;
@@ -665,5 +667,20 @@ void SortSample(T arr[], const int n)
 template<typename T>
 void SortSample(T arr[][n], const int n)
 {
+	for (int i = 0; i < n; i++)//меняем мместами 
+	{
+		for (int j = 0; j < n-1; j++)//поиск минимального элемента 
+		{
+			int IndexMin = j;
+			for (int k = j + 1; k < n; k++)
+			{
+				if (arr[i][k] < arr[i][IndexMin])IndexMin = k;
+			}
+				T temp = arr[i][j];
+				arr[i][j] = arr[i][IndexMin];
+				arr[i][IndexMin] = temp;
+		}
+		
+	}
 
 }
